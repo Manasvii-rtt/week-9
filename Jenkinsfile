@@ -18,5 +18,10 @@ pipeline {
                 bat 'kubectl apply -f C:/Users/chand/Downloads/week-9-main/week-9-main/service.yaml'
             }
         }
+        stage('Automated UI Test') {
+            steps {
+                bat 'python C:/Users/chand/Downloads/week-9-main/week-9-main/test_registration.py'
+            }
+        }
     }
 }
